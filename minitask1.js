@@ -14,18 +14,16 @@ const extraInfo = {
 }
 
 const extraSkills = ["Badminton", "Balapan"]
-const gabunganSkills = [ ...extraInfo.skills, ...extraSkills]
 
 const profile = {
     ...bio,
-    ...extraInfo
+    ...extraInfo,
+    ...{
+        skills: [...extraInfo.skills, ...extraSkills]
+    }
 }
-
-profile.skills = [
-    ...gabunganSkills
-]
 
 console.log(profile.skills[1])
 // Painting
 
-console.log(profile.skills)
+console.log(profile)
