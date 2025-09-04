@@ -20,7 +20,7 @@ const profile = {
 }
 
 const {skills: [_, skill]} = profile
-const {education: [{name}]} = profile
+const {education: [{name: namaSekolah}]} = profile
 
 console.log(skill)
-console.log(name)
+console.log(namaSekolah)
