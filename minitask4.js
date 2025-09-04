@@ -20,11 +20,18 @@ const celciusToKelvin = (suhuCelcius) =>{
     return result
 }
 
-function outputKonversi(suhuCelcius) {
+function outputKonversiImpure(suhuCelcius) {
     console.log(`Konversi Celcius Ke Ferenheit: ${celciusToFerenheit(suhuCelcius)}°F`)
     console.log(`Konversi Celcius Ke Reamur: ${celciusToReamur(suhuCelcius)}°R`)
     console.log(`Konversi Celcius Ke Kelvin: ${celciusToKelvin(suhuCelcius)}°K`)
 }
 
-outputKonversi(suhu)
+function outputKonversiPure(suhuCelcius, funcKonversi) {
+    console.log(`Hasil Konversi: ${funcKonversi(suhuCelcius)}°`)
+}
+
+outputKonversiImpure(suhu)
+
+console.log("\nHasil output dengan callback")
+outputKonversiPure(suhu, celciusToKelvin)
 
