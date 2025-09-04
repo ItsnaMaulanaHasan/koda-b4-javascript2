@@ -26,12 +26,14 @@ function outputKonversiImpure(suhuCelcius) {
     console.log(`Konversi Celcius Ke Kelvin: ${celciusToKelvin(suhuCelcius)}°K`)
 }
 
-function outputKonversiPure(suhuCelcius, funcKonversi) {
-    console.log(`Hasil Konversi: ${funcKonversi(suhuCelcius)}°`)
+function outputKonversiPure(suhuCelcius, cToF, cToR, cToK) {
+    console.log(`Konversi Celcius Ke Ferenheit: ${cToF(suhuCelcius)}°F`)
+    console.log(`Konversi Celcius Ke Reamur: ${cToR(suhuCelcius)}°R`)
+    console.log(`Konversi Celcius Ke Kelvin: ${cToK(suhuCelcius)}°K`)
 }
 
 outputKonversiImpure(suhu)
 
 console.log("\nHasil output dengan callback")
-outputKonversiPure(suhu, celciusToKelvin)
+outputKonversiPure(suhu, celciusToFerenheit, celciusToReamur, celciusToKelvin)
 
