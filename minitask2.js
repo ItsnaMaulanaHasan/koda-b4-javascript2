@@ -1,3 +1,4 @@
+// destruct painting, destruct education name[0],
 const bio = {
     name: "Itsna Maulana Hasan",
     age: 23,
@@ -13,15 +14,13 @@ const extraInfo = {
     ]
 }
 
-const extraSkills = ["Badminton", "Balapan"]
-
 const profile = {
     ...bio,
     ...extraInfo,
-    ...{
-        skills: [...extraInfo.skills, ...extraSkills]
-    }
 }
 
-console.log(profile.skills[1])
-console.log(profile)
+const {skills: [_, skill]} = profile
+const {education: [{name}]} = profile
+
+console.log(skill)
+console.log(name)
